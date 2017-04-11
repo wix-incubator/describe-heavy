@@ -8,7 +8,8 @@
   },
   "main": "src/index.js",
   "files": [
-    "src"
+    "src",
+    "LICENSE"
   ],
   "scripts": {
     "start": "wix-node-build start",
