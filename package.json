@@ -12,18 +12,18 @@
     "LICENSE"
   ],
   "scripts": {
-    "start": "wix-node-build start",
-    "pretest": "wix-node-build lint && wix-node-build build",
+    "start": "yoshi start",
+    "pretest": "yoshi lint && yoshi build",
     "build": ":",
-    "test": "wix-node-build test",
-    "release": "wix-node-build release"
+    "test": "yoshi test",
+    "release": "yoshi release"
   },
   "dependencies": {
   },
   "private": false,
   "devDependencies": {
     "chai": "~3.5.0",
-    "wix-node-build": "latest"
+    "yoshi": "latest"
   },
   "eslintConfig": {
     "extends": "wix/esnext"
