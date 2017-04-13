@@ -1,6 +1,6 @@
 # describe-heavy
 
-do not run some test suits in wix-node-build watch mode (or wallaby)
+do not run some test suits in yoshi watch mode (or wallaby)
 
 this:
 ```js
