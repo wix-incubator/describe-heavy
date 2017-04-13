@@ -1,5 +1,7 @@
 # describe-heavy
 
+[![Build Status](https://travis-ci.org/wix/describe-heavy.svg?branch=master)](https://travis-ci.org/wix/describe-heavy)
+
 do not run some test suits in yoshi watch mode (or wallaby)
 
 this:
