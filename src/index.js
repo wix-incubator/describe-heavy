@@ -1,14 +1,18 @@
 'use strict';
 
+function skip() {
+  return !!process.env.WIX_NODE_BUILD_WATCH_MODE || !!process.env.SKIP_HEAVY;
+}
+
 describe.heavy = (name, fn) =>
   describe(name, () => {
-    if (!process.env.WIX_NODE_BUILD_WATCH_MODE) {
+    if (!skip()) {
       fn();
     }
   });
 
 function describeHeavy(desc, fn) {
-  if (process.env.WIX_NODE_BUILD_WATCH_MODE) {
+  if (skip()) {
     describe.skip.apply(this, arguments);
   } else {
     describe(desc, function () {
@@ -21,7 +25,7 @@ function describeHeavy(desc, fn) {
 }
 
 function itHeavy() {
-  if (process.env.WIX_NODE_BUILD_WATCH_MODE) {
+  if (skip()) {
     it.skip.apply(this, arguments);
   } else {
     const result = it.apply(this, arguments);
